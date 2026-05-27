@@ -1,0 +1,14 @@
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1110    1109    1110      11516  pty0      197608 09:57:03 /usr/bin/bash
+     1711       1    1711      14684  ?         197608 16:29:58 /usr/bin/mintty
+     1284       1    1284      16688  ?         197608 10:52:00 /c/Users/USER/AppData/Local/Programs/Windsurf/resources/app/extensions/windsurf/devin/bin/devin
+     1044       1    1044      13304  ?         197608 09:50:48 /c/Users/USER/AppData/Local/Programs/Windsurf/resources/app/extensions/windsurf/devin/bin/devin
+      990       1     990      14516  cons1     197608 09:49:30 /usr/bin/bash
+     1344       1    1344       1064  cons2     197608 12:50:48 /usr/bin/bash
+     1109       1    1109      22816  ?         197608 09:57:02 /usr/bin/mintty
+      945       1     945      14748  cons0     197608 09:41:32 /usr/bin/bash
+     1455    1110    1455       6108  pty0      197608 15:47:01 /usr/bin/ssh
+     1285       1    1285       5648  ?         197608 10:52:00 /c/Users/USER/AppData/Local/Programs/Windsurf/resources/app/extensions/windsurf/devin/bin/devin
+     1712    1711    1712      30756  pty1      197608 16:29:58 /usr/bin/bash
+     1881     990    1881      13908  cons1     197608 16:44:38 /usr/bin/PS
+     1045       1    1045      11564  ?         197608 09:50:48 /c/Users/USER/AppData/Local/Programs/Windsurf/resources/app/extensions/windsurf/devin/bin/devin

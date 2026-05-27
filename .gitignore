@@ -35,3 +35,5 @@ out/
 
 AGENTS.md
 CLAUDE.md
+
+.env
