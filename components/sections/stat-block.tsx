@@ -23,10 +23,7 @@ function StatItem({
         {count}
         {suffix}
       </p>
-      <p
-        className="type-label whitespace-pre-line"
-        style={{ color: "rgba(255,255,255,0.48)" }}
-      >
+      <p className="type-label whitespace-pre-line text-white/[0.48]">
         {label}
       </p>
     </div>
@@ -35,7 +32,7 @@ function StatItem({
 
 export default function StatBlock() {
   return (
-    <section className="section" style={{ background: "var(--bg-black)" }}>
+    <section className="section bg-surface-black">
       <div className="section-inner">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
           {STATS.map((stat) => (
