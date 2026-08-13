@@ -28,20 +28,9 @@ export default function FilterBar({
   resultCount,
 }: FilterBarProps) {
   return (
-    <div
-      className="sticky top-11 z-30 py-3 px-[var(--gutter)]"
-      style={{
-        background: 'rgba(29,29,31,0.90)',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        borderBottom: '1px solid var(--border-light)',
-      }}
-    >
+    <div className="sticky top-11 z-30 py-3 px-[var(--gutter)] bg-[rgba(29,29,31,0.90)] backdrop-blur-xl border-b border-edge-light">
       <div className="section-inner-wide mx-auto flex flex-wrap items-center gap-4">
-        <div
-          className="flex gap-1 rounded-[980px] p-[3px]"
-          style={{ background: 'rgba(255,255,255,0.08)' }}
-        >
+        <div className="flex gap-1 rounded-[980px] p-[3px] bg-white/[0.08]">
           {CATEGORY_TABS.map((tab) => (
             <button
               key={tab.value}

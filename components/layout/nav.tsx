@@ -12,19 +12,8 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-40 h-14"
-      style={{
-        background: "rgba(29,29,31,0.72)",
-        backdropFilter: "saturate(180%) blur(20px)",
-        WebkitBackdropFilter: "saturate(180%) blur(20px)",
-        borderBottom: "1px solid rgba(255,255,255,0.1)",
-      }}
-    >
-      <div
-        className="flex items-center justify-between h-full px-6 mx-auto"
-        style={{ maxWidth: "var(--max-width-wide)" }}
-      >
+    <header className="fixed top-0 left-0 right-0 z-40 h-14 bg-[rgba(29,29,31,0.72)] backdrop-blur-xl backdrop-saturate-[1.8] border-b border-white/10">
+      <div className="flex items-center justify-between h-full px-6 mx-auto max-w-wide">
         {/* Logo */}
         <Link
           href="/"
@@ -77,14 +66,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div
-          className="md:hidden absolute top-11 left-0 right-0 py-4"
-          style={{
-            background: "rgba(29,29,31,0.95)",
-            backdropFilter: "blur(20px)",
-            borderBottom: "1px solid rgba(255,255,255,0.1)",
-          }}
-        >
+        <div className="md:hidden absolute top-11 left-0 right-0 py-4 bg-[rgba(29,29,31,0.95)] backdrop-blur-xl border-b border-white/10">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

@@ -11,7 +11,7 @@ interface VehicleGridProps {
 export default function VehicleGrid({ vehicles }: VehicleGridProps) {
   if (vehicles.length === 0) {
     return (
-      <div className="section flex flex-col items-center justify-center text-center" style={{ minHeight: '40vh' }}>
+      <div className="section flex flex-col items-center justify-center text-center min-h-[40vh]">
         <p className="type-title-2 text-[var(--text-white)] mb-3">No vehicles match your filters.</p>
         <p className="type-body text-[var(--text-secondary)]">Adjust the filters above to see more results.</p>
       </div>
@@ -19,7 +19,7 @@ export default function VehicleGrid({ vehicles }: VehicleGridProps) {
   }
 
   return (
-    <section className="section" style={{ background: 'var(--bg-near-black)' }}>
+    <section className="section bg-surface-near-black">
       <div className="section-inner-wide mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {vehicles.map((vehicle, i) => (

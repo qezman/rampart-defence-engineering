@@ -1,5 +1,4 @@
 import { z } from "zod";
-import type { ServiceType } from "./service";
 
 export const enquiryFormSchema = z.object({
   fullName: z.string().min(2, "Full name is required"),
@@ -20,4 +19,3 @@ export const enquiryFormSchema = z.object({
 });
 
 export type EnquiryFormData = z.infer<typeof enquiryFormSchema>;
-export type EnquiryType = ServiceType;

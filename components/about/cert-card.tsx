@@ -15,16 +15,12 @@ export default function CertCard({ cert, index = 0 }: CertCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="rounded-card p-8"
-      style={{ background: 'var(--bg-surface-1)', boxShadow: 'var(--shadow-card)' }}
+      className="rounded-card p-8 bg-surface-1 shadow-card"
     >
-      <p
-        className="type-hero mb-3"
-        style={{ fontSize: '28px', fontWeight: 700, color: 'var(--text-white)', lineHeight: 1 }}
-      >
+      <p className="mb-3 text-[28px] font-bold leading-none text-ink-white">
         {cert.standard}
       </p>
-      <p className="type-label text-[var(--accent-dark-bg)] mb-3">{cert.body}</p>
+      <p className="type-label text-accent-dark mb-3">{cert.body}</p>
       <p className="type-caption text-[var(--text-secondary)]">{cert.covers}</p>
     </motion.div>
   )

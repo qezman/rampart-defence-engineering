@@ -41,7 +41,7 @@ const FADE_UP = {
 
 export default function CapabilityStrip() {
   return (
-    <section className="section" style={{ background: "var(--bg-near-black)" }}>
+    <section className="section bg-surface-near-black">
       <div className="section-inner">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {CAPABILITIES.map((cap, i) => (

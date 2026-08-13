@@ -40,11 +40,8 @@ export default function AboutPage() {
   return (
     <>
       {/* Header */}
-      <section className="section" style={{ background: "var(--bg-black)" }}>
-        <div
-          className="section-inner"
-          style={{ paddingTop: "var(--space-80)" }}
-        >
+      <section className="section bg-surface-black">
+        <div className="section-inner pt-[var(--space-80)]">
           <SectionLabel className="mb-5">About</SectionLabel>
           <h1 className="type-headline text-[var(--text-white)]">
             Engineering protection. Since day one.
@@ -53,16 +50,13 @@ export default function AboutPage() {
       </section>
 
       {/* Company Story */}
-      <section
-        className="section"
-        style={{ background: "var(--bg-near-black)" }}
-      >
+      <section className="section bg-surface-near-black">
         <div className="section-inner max-w-[720px]">
           <p className="type-body text-[var(--text-secondary)] mb-6">
             Rampart Defence Engineering was founded in 2004 with a single
             mandate: bring European ballistic certification standards to
             armoured vehicle engineering in Sub-Saharan Africa. At the time, the
-            region's procurement market depended on imported platforms with
+            region&rsquo;s procurement market depended on imported platforms with
             limited in-country support. We changed that.
           </p>
           <p className="type-body text-[var(--text-secondary)] mb-6">
@@ -82,7 +76,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="section" style={{ background: "var(--bg-black)" }}>
+      <section className="section bg-surface-black">
         <div className="section-inner">
           <h2 className="type-headline text-[var(--text-white)] mb-12">
             What we stand on.
@@ -91,11 +85,7 @@ export default function AboutPage() {
             {VALUES.map((value) => (
               <div
                 key={value.name}
-                className="rounded-card p-10"
-                style={{
-                  background: "var(--bg-surface-1)",
-                  boxShadow: "var(--shadow-card)",
-                }}
+                className="rounded-card p-10 bg-surface-1 shadow-card"
               >
                 <p className="type-title-2 text-[var(--text-white)] mb-3">
                   {value.name}
@@ -110,10 +100,7 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership */}
-      <section
-        className="section"
-        style={{ background: "var(--bg-near-black)" }}
-      >
+      <section className="section bg-surface-near-black">
         <div className="section-inner">
           <h2 className="type-headline text-[var(--text-white)] mb-12">
             Leadership
@@ -127,7 +114,7 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="section" style={{ background: "var(--bg-black)" }}>
+      <section className="section bg-surface-black">
         <div className="section-inner">
           <h2 className="type-headline text-[var(--text-white)] mb-4">
             Certifications

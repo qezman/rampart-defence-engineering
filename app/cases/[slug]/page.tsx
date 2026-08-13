@@ -33,8 +33,8 @@ export default function CaseDetailPage({ params }: PageProps) {
   return (
     <>
       {/* Hero */}
-      <section className="section" style={{ background: 'var(--bg-black)' }}>
-        <div className="section-inner" style={{ paddingTop: 'var(--space-80)' }}>
+      <section className="section bg-surface-black">
+        <div className="section-inner pt-[var(--space-80)]">
           <SectionLabel className="mb-5">{SECTOR_LABELS[c.sector] ?? c.sector}</SectionLabel>
           <h1 className="type-headline text-[var(--text-white)] mb-6 max-w-[640px]">{c.title}</h1>
 
@@ -46,11 +46,7 @@ export default function CaseDetailPage({ params }: PageProps) {
               { label: 'Timeline', value: c.scope.timeline },
               { label: 'Outcome', value: c.scope.outcome },
             ].map((item) => (
-              <div
-                key={item.label}
-                className="rounded-card p-6"
-                style={{ background: 'var(--bg-surface-1)' }}
-              >
+              <div key={item.label} className="rounded-card p-6 bg-surface-1">
                 <p className="type-label text-[var(--text-tertiary)] mb-2">{item.label}</p>
                 <p className="type-body text-[var(--text-white)]">{item.value}</p>
               </div>
@@ -60,7 +56,7 @@ export default function CaseDetailPage({ params }: PageProps) {
       </section>
 
       {/* Challenge */}
-      <section className="section" style={{ background: 'var(--bg-near-black)' }}>
+      <section className="section bg-surface-near-black">
         <div className="section-inner max-w-[720px]">
           <h2 className="type-title-1 text-[var(--text-white)] mb-6">The Challenge</h2>
           <p className="type-body text-[var(--text-secondary)]">{c.challenge}</p>
@@ -68,7 +64,7 @@ export default function CaseDetailPage({ params }: PageProps) {
       </section>
 
       {/* Solution */}
-      <section className="section" style={{ background: 'var(--bg-black)' }}>
+      <section className="section bg-surface-black">
         <div className="section-inner max-w-[720px]">
           <h2 className="type-title-1 text-[var(--text-white)] mb-6">The Solution</h2>
           <p className="type-body text-[var(--text-secondary)]">{c.solution}</p>
@@ -76,17 +72,16 @@ export default function CaseDetailPage({ params }: PageProps) {
       </section>
 
       {/* Results */}
-      <section className="section" style={{ background: 'var(--bg-near-black)' }}>
+      <section className="section bg-surface-near-black">
         <div className="section-inner">
           <h2 className="type-title-1 text-[var(--text-white)] mb-8">Results</h2>
           <div className="flex flex-col gap-4">
             {c.results.map((result, i) => (
               <div
                 key={i}
-                className="flex items-start gap-5 py-5"
-                style={{ borderBottom: '1px solid var(--border-light)' }}
+                className="flex items-start gap-5 py-5 border-b border-edge-light"
               >
-                <span className="type-label shrink-0 mt-1" style={{ color: 'var(--accent-dark-bg)' }}>
+                <span className="type-label shrink-0 mt-1 text-accent-dark">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <p className="type-body text-[var(--text-secondary)]">{result}</p>
@@ -97,7 +92,7 @@ export default function CaseDetailPage({ params }: PageProps) {
       </section>
 
       {/* CTA */}
-      <section className="section" style={{ background: 'var(--bg-black)' }}>
+      <section className="section bg-surface-black">
         <div className="section-inner text-center">
           <h2 className="type-title-1 text-[var(--text-white)] mb-4">
             Similar requirements?

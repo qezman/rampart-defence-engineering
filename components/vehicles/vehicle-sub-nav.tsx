@@ -15,15 +15,7 @@ export default function VehicleSubNav() {
   const { activeSection } = useScrollNav(SECTIONS.map((s) => s.id))
 
   return (
-    <div
-      className="sticky top-11 z-30 flex items-center h-11 px-[var(--gutter)] overflow-x-auto"
-      style={{
-        background: 'rgba(29,29,31,0.90)',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        borderBottom: '1px solid var(--border-light)',
-      }}
-    >
+    <div className="sticky top-11 z-30 flex items-center h-11 px-[var(--gutter)] overflow-x-auto bg-[rgba(29,29,31,0.90)] backdrop-blur-xl border-b border-edge-light">
       <div className="flex items-center gap-8 mr-auto">
         {SECTIONS.map((s) => (
           <a

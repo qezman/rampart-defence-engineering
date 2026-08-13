@@ -17,7 +17,7 @@ export default function VehicleGallery({ images, vehicleName }: VehicleGalleryPr
   const [hero, ...rest] = visibleImages
 
   return (
-    <section id="gallery" className="section" style={{ background: 'var(--bg-near-black)' }}>
+    <section id="gallery" className="section bg-surface-near-black">
       <div className="section-inner-wide mx-auto px-[var(--gutter)]">
         <motion.h2
           className="type-title-1 text-[var(--text-white)] mb-10"
@@ -28,10 +28,9 @@ export default function VehicleGallery({ images, vehicleName }: VehicleGalleryPr
           Gallery
         </motion.h2>
 
-        <div className="grid grid-cols-4 grid-rows-2 gap-3" style={{ height: '480px' }}>
+        <div className="grid grid-cols-4 grid-rows-2 gap-3 h-[480px]">
           <button
-            className="col-span-2 row-span-2 relative overflow-hidden rounded-card group"
-            style={{ background: '#1a1a1a' }}
+            className="col-span-2 row-span-2 relative overflow-hidden rounded-card group bg-[#1a1a1a]"
             onClick={() => open(0)}
           >
             <FallbackImage
@@ -51,8 +50,7 @@ export default function VehicleGallery({ images, vehicleName }: VehicleGalleryPr
           {rest.slice(0, 4).map((image, i) => (
             <button
               key={`${image}-${i}`}
-              className="relative overflow-hidden rounded-card group"
-              style={{ background: '#1a1a1a' }}
+              className="relative overflow-hidden rounded-card group bg-[#1a1a1a]"
               onClick={() => open(i + 1)}
             >
               <FallbackImage

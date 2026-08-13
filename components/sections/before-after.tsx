@@ -27,8 +27,7 @@ export default function BeforeAfter({ beforeLabel = 'Before', afterLabel = 'Afte
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="w-full overflow-hidden rounded-card select-none"
-      style={{ aspectRatio: '16/7', position: 'relative', cursor: 'col-resize' }}
+      className="w-full overflow-hidden rounded-card select-none relative aspect-[16/7] cursor-col-resize"
       ref={containerRef}
       onMouseDown={() => { isDragging.current = true }}
       onMouseMove={(e) => { if (isDragging.current) updateSlider(e.clientX) }}

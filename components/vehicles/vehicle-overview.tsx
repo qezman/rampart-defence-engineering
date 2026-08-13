@@ -9,7 +9,7 @@ interface VehicleOverviewProps {
 
 export default function VehicleOverview({ vehicle }: VehicleOverviewProps) {
   return (
-    <section id="overview" className="section" style={{ background: 'var(--bg-near-black)' }}>
+    <section id="overview" className="section bg-surface-near-black">
       <div className="section-inner">
         <motion.p
           className="type-body text-[var(--text-secondary)] max-w-[660px] mb-16"
@@ -22,7 +22,7 @@ export default function VehicleOverview({ vehicle }: VehicleOverviewProps) {
         </motion.p>
 
         {/* Highlight callouts */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ background: 'var(--border-light)' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-edge-light">
           {vehicle.highlights.map((highlight, i) => (
             <motion.div
               key={highlight}
@@ -30,8 +30,7 @@ export default function VehicleOverview({ vehicle }: VehicleOverviewProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="p-8"
-              style={{ background: 'var(--bg-near-black)' }}
+              className="p-8 bg-surface-near-black"
             >
               <p className="type-title-3 text-[var(--text-white)] mb-2">{highlight}</p>
               <p className="type-caption text-[var(--text-secondary)]">

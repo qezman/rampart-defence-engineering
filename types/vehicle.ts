@@ -1,11 +1,6 @@
 export type VehicleCategory = 'civilian' | 'military'
 export type VehicleStatus = 'available' | 'made-to-order'
 
-export interface VehicleSpec {
-  label: string
-  value: string
-}
-
 export interface Vehicle {
   slug: string
   name: string

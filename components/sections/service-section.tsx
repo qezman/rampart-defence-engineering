@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 import SectionLabel from "@/components/ui/section-label";
 import PillButton from "@/components/ui/pill-button";
 
+type SectionBackground = "black" | "near-black";
+
+const BACKGROUND_CLASSES: Record<SectionBackground, string> = {
+  black: "bg-surface-black",
+  "near-black": "bg-surface-near-black",
+};
+
 interface ServiceSectionProps {
   id?: string;
   label: string;
@@ -13,7 +20,7 @@ interface ServiceSectionProps {
   tiers?: { name: string; description: string; suitableFor: string }[];
   steps?: string[];
   cta: { label: string; href: string };
-  background: string;
+  background: SectionBackground;
   children?: React.ReactNode;
 }
 
@@ -39,7 +46,7 @@ export default function ServiceSection({
   children,
 }: ServiceSectionProps) {
   return (
-    <section id={id} className="section" style={{ background }}>
+    <section id={id} className={`section ${BACKGROUND_CLASSES[background]}`}>
       <div className="section-inner">
         <motion.div
           initial="hidden"
@@ -70,8 +77,7 @@ export default function ServiceSection({
             {listItems.map((item) => (
               <li
                 key={item}
-                className="type-body text-[var(--text-secondary)] py-3"
-                style={{ borderBottom: "1px solid var(--border-light)" }}
+                className="type-body text-[var(--text-secondary)] py-3 border-b border-edge-light"
               >
                 {item}
               </li>
@@ -95,11 +101,7 @@ export default function ServiceSection({
                     transition: { delay: i * 0.1, duration: 0.6 },
                   },
                 }}
-                className="rounded-card p-10"
-                style={{
-                  background: "var(--bg-surface-1)",
-                  boxShadow: "var(--shadow-card)",
-                }}
+                className="rounded-card p-10 bg-surface-1 shadow-card"
               >
                 <p className="type-title-3 text-[var(--text-white)] mb-2">
                   {tier.name}
@@ -125,10 +127,7 @@ export default function ServiceSection({
           >
             {steps.map((step, i) => (
               <li key={step} className="flex items-start gap-5">
-                <span
-                  className="type-label shrink-0 mt-1"
-                  style={{ color: "var(--accent-dark-bg)" }}
-                >
+                <span className="type-label shrink-0 mt-1 text-accent-dark">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="type-body text-[var(--text-secondary)]">{step}</p>

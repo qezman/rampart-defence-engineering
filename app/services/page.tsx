@@ -13,8 +13,8 @@ export default function ServicesPage() {
   return (
     <>
       {/* Header */}
-      <section className="section" style={{ background: 'var(--bg-black)' }}>
-        <div className="section-inner" style={{ paddingTop: 'var(--space-80)' }}>
+      <section className="section bg-surface-black">
+        <div className="section-inner pt-[var(--space-80)]">
           <SectionLabel className="mb-5">Services</SectionLabel>
           <h1 className="type-headline text-[var(--text-white)] mb-4">
             We keep armoured vehicles mission-ready.
@@ -39,7 +39,7 @@ export default function ServicesPage() {
           'Electrical, intercom, and communication systems',
         ]}
         cta={{ label: 'Request a Repair Assessment →', href: '/contact' }}
-        background="var(--bg-near-black)"
+        background="near-black"
       />
 
       <ServiceSection
@@ -53,7 +53,7 @@ export default function ServicesPage() {
           { name: 'Full Revival', description: 'Complete structural and mechanical rebuild', suitableFor: '10+ year platforms' },
         ]}
         cta={{ label: 'Discuss Your Fleet →', href: '/contact' }}
-        background="var(--bg-black)"
+        background="black"
       >
         <div className="mb-12">
           <BeforeAfter />
@@ -74,7 +74,7 @@ export default function ServicesPage() {
           'Certification and delivery',
         ]}
         cta={{ label: 'Start a Conversion Project →', href: '/contact' }}
-        background="var(--bg-near-black)"
+        background="near-black"
       />
     </>
   )

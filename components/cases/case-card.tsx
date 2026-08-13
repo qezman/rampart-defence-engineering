@@ -28,11 +28,7 @@ export default function CaseCard({ caseStudy, index = 0 }: CaseCardProps) {
     >
       <Link
         href={`/cases/${caseStudy.slug}`}
-        className="group block rounded-card overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
-        style={{
-          background: "var(--bg-surface-1)",
-          boxShadow: "var(--shadow-card)",
-        }}
+        className="group block rounded-card overflow-hidden transition-transform duration-300 hover:scale-[1.02] bg-surface-1 shadow-card"
       >
         <div
           className="h-[280px] relative overflow-hidden"
@@ -52,10 +48,7 @@ export default function CaseCard({ caseStudy, index = 0 }: CaseCardProps) {
         </div>
 
         <div className="p-8">
-          <p
-            className="type-label mb-3"
-            style={{ color: "var(--accent-dark-bg)" }}
-          >
+          <p className="type-label mb-3 text-accent-dark">
             {SECTOR_LABELS[caseStudy.sector]}
           </p>
           <h3 className="type-title-2 text-[var(--text-white)] mb-2 leading-snug">
@@ -68,10 +61,7 @@ export default function CaseCard({ caseStudy, index = 0 }: CaseCardProps) {
           <p className="type-body text-[var(--text-secondary)] mb-6 line-clamp-3">
             {caseStudy.challenge}
           </p>
-          <span
-            className="type-caption font-medium"
-            style={{ color: "var(--accent-dark-bg)" }}
-          >
+          <span className="type-caption font-medium text-accent-dark">
             Read More
           </span>
         </div>

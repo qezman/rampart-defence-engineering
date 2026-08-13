@@ -3,10 +3,10 @@ import { NAV_LINKS, CONTACT } from '@/lib/constants'
 
 export default function Footer() {
   return (
-    <footer style={{ background: 'var(--bg-near-black)', borderTop: '1px solid var(--border-light)' }}>
+    <footer className="bg-surface-near-black border-t border-edge-light">
       <div className="section-inner px-[var(--gutter)] mx-auto py-16">
         {/* Main row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12" style={{ borderBottom: '1px solid var(--border-light)' }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-edge-light">
           {/* Brand */}
           <div>
             <p className="font-semibold text-[var(--text-white)] text-[17px] mb-3">

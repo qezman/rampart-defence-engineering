@@ -12,8 +12,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
   return (
     <Link
       href={`/vehicles/${vehicle.slug}`}
-      className="group block rounded-card overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
-      style={{ background: 'var(--bg-surface-1)', boxShadow: 'var(--shadow-card)' }}
+      className="group block rounded-card overflow-hidden transition-transform duration-300 hover:scale-[1.02] bg-surface-1 shadow-card"
     >
       <div className="relative h-[240px] overflow-hidden bg-[#1a1a1a]">
         <FallbackImage
@@ -28,18 +27,12 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
 
         <div className="absolute top-3 right-3">
           {vehicle.status === 'available' ? (
-            <span
-              className="flex items-center gap-1.5 type-label rounded-[980px] px-2.5 py-1"
-              style={{ background: 'rgba(0,0,0,0.7)', color: '#30d158' }}
-            >
+            <span className="flex items-center gap-1.5 type-label rounded-[980px] px-2.5 py-1 bg-black/70 text-[#30d158]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#30d158]" />
               Available
             </span>
           ) : (
-            <span
-              className="type-label rounded-[980px] px-2.5 py-1"
-              style={{ background: 'rgba(0,0,0,0.7)', color: 'rgba(255,255,255,0.72)' }}
-            >
+            <span className="type-label rounded-[980px] px-2.5 py-1 bg-black/70 text-white/[0.72]">
               Made to Order
             </span>
           )}
@@ -58,7 +51,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
           {vehicle.weight} / {vehicle.seats} seats / {vehicle.protectionLevel}
         </p>
 
-        <span className="type-caption font-medium" style={{ color: 'var(--accent-dark-bg)' }}>
+        <span className="type-caption font-medium text-accent-dark">
           View Details
         </span>
       </div>

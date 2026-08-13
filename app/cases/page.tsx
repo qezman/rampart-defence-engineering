@@ -15,8 +15,8 @@ export default function CasesPage() {
   return (
     <>
       {/* Header */}
-      <section className="section" style={{ background: 'var(--bg-black)' }}>
-        <div className="section-inner" style={{ paddingTop: 'var(--space-80)' }}>
+      <section className="section bg-surface-black">
+        <div className="section-inner pt-[var(--space-80)]">
           <SectionLabel className="mb-5">Case Studies</SectionLabel>
           <h1 className="type-headline text-[var(--text-white)]">
             Projects that speak for themselves.
@@ -25,7 +25,7 @@ export default function CasesPage() {
       </section>
 
       {/* Cases grid */}
-      <section className="section" style={{ background: 'var(--bg-near-black)' }}>
+      <section className="section bg-surface-near-black">
         <div className="section-inner">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {cases.map((c, i) => (

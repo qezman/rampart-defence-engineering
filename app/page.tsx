@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import HeroTile from "@/components/sections/hero-tile";
 import CapabilityStrip from "@/components/sections/capability-strip";
 import StatBlock from "@/components/sections/stat-block";
 import PillButton from "@/components/ui/pill-button";
 import SectionLabel from "@/components/ui/section-label";
 import { CONTACT } from "@/lib/constants";
-import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title:
@@ -37,12 +37,12 @@ export default function HomePage() {
       <CapabilityStrip />
 
       {/* Civilian Range Tile */}
-      <section className="section" style={{ background: "var(--bg-black)" }}>
+      <section className="section bg-surface-black">
         <div className="section-inner flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1">
             <SectionLabel className="mb-5">Civilian Range</SectionLabel>
             <h2 className="type-headline text-[var(--text-white)] mb-5">
-              Protection for those who move in harm's way.
+              Protection for those who move in harm&rsquo;s way.
             </h2>
             <p className="type-body text-[var(--text-secondary)] mb-8 max-w-[440px]">
               SUVs, saloons, buses and pickups armoured to BR4–BR7. Engineered
@@ -56,27 +56,28 @@ export default function HomePage() {
               View Civilian Vehicles →
             </PillButton>
           </div>
-          <div className="flex-1 w-full aspect-[4/3] rounded-card overflow-hidden">
-            <img
+          <div className="flex-1 relative w-full aspect-[4/3] rounded-card overflow-hidden">
+            <Image
               src="/images/vehicles/suv.jpg"
               alt="Armoured civilian SUV"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
       </section>
 
       {/* Military Range Tile */}
-      <section
-        className="section"
-        style={{ background: "var(--bg-near-black)" }}
-      >
+      <section className="section bg-surface-near-black">
         <div className="section-inner flex flex-col-reverse md:flex-row items-center gap-16">
-          <div className="flex-1 w-full aspect-[4/3] rounded-card overflow-hidden">
-            <img
+          <div className="flex-1 relative w-full aspect-[4/3] rounded-card overflow-hidden">
+            <Image
               src="/images/vehicles/STANAG.jpg"
               alt="STANAG certified military vehicle"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <div className="flex-1">
@@ -102,37 +103,26 @@ export default function HomePage() {
       </section>
 
       {/* Services Tile — light */}
-      <section className="section" style={{ background: "var(--bg-light)" }}>
+      <section className="section bg-surface-light">
         <div className="section-inner">
-          <h2
-            className="type-headline mb-12 text-center"
-            style={{ color: "var(--text-dark)" }}
-          >
+          <h2 className="type-headline mb-12 text-center text-ink-dark">
             Three service lines. One engineering team.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SERVICE_CARDS.map((card) => (
               <div
                 key={card.title}
-                className="rounded-card p-10 bg-white"
-                style={{ boxShadow: "0 2px 20px rgba(0,0,0,0.08)" }}
+                className="rounded-card p-10 bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]"
               >
-                <p
-                  className="type-title-3 mb-3"
-                  style={{ color: "var(--text-dark)" }}
-                >
+                <p className="type-title-3 mb-3 text-ink-dark">
                   {card.title}
                 </p>
-                <p
-                  className="type-body mb-6"
-                  style={{ color: "rgba(29,29,31,0.72)" }}
-                >
+                <p className="type-body mb-6 text-black/[0.72]">
                   {card.body}
                 </p>
                 <a
                   href={card.href}
-                  className="type-caption font-medium"
-                  style={{ color: "var(--accent)" }}
+                  className="type-caption font-medium text-accent"
                 >
                   Learn More →
                 </a>
@@ -145,10 +135,7 @@ export default function HomePage() {
       <StatBlock />
 
       {/* Featured Case Study */}
-      <section
-        className="section"
-        style={{ background: "var(--bg-near-black)" }}
-      >
+      <section className="section bg-surface-near-black">
         <div className="section-inner">
           <SectionLabel className="mb-5">Case Study</SectionLabel>
           <h2 className="type-headline text-[var(--text-white)] mb-5 max-w-[560px]">
@@ -163,13 +150,13 @@ export default function HomePage() {
             variant="ghost"
             id="home-cta-case"
           >
-            Read the Case Study →{/* <ArrowRight className="ml-2" /> */}
+            Read the Case Study →
           </PillButton>
         </div>
       </section>
 
       {/* Enquiry CTA */}
-      <section className="section" style={{ background: "var(--bg-black)" }}>
+      <section className="section bg-surface-black">
         <div className="section-inner text-center">
           <h2 className="type-headline text-[var(--text-white)] mb-4">
             Ready to discuss your requirements?
@@ -183,8 +170,7 @@ export default function HomePage() {
             </PillButton>
             <a
               href={`tel:${CONTACT.phone}`}
-              className="type-body"
-              style={{ color: "var(--accent-dark-bg)" }}
+              className="type-body text-accent-dark"
             >
               {CONTACT.phone}
             </a>

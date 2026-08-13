@@ -14,8 +14,8 @@ export default function VehiclesPage() {
   return (
     <>
       {/* Header */}
-      <section className="section" style={{ background: 'var(--bg-black)', paddingBottom: '60px' }}>
-        <div className="section-inner" style={{ paddingTop: 'var(--space-80)' }}>
+      <section className="section bg-surface-black pb-[60px]">
+        <div className="section-inner pt-[var(--space-80)]">
           <SectionLabel className="mb-5">Our Vehicles</SectionLabel>
           <h1 className="type-headline text-[var(--text-white)] mb-4">
             Every platform. Every protection level.

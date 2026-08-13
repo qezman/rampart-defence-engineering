@@ -2,6 +2,7 @@
 
 import { useEnquiryForm } from "@/hooks/use-enquiry-form";
 import PillButton from "@/components/ui/pill-button";
+import { cn } from "@/lib/utils/cn";
 
 const ENQUIRY_TYPES = [
   { value: "purchase", label: "Vehicle Purchase" },
@@ -12,9 +13,7 @@ const ENQUIRY_TYPES = [
 ];
 
 const INPUT_CLASS =
-  "w-full bg-transparent border-b type-body text-[var(--text-white)] py-3 outline-none transition-colors placeholder:text-[var(--text-tertiary)] focus:border-[var(--accent-dark-bg)]";
-const BORDER_STYLE = { borderBottom: "1px solid var(--border)" };
-const FOCUS_BORDER = "1px solid var(--accent-dark-bg)";
+  "w-full bg-transparent border-b border-edge type-body text-[var(--text-white)] py-3 outline-none transition-colors placeholder:text-[var(--text-tertiary)] focus:border-accent-dark";
 
 export default function EnquiryForm() {
   const { form, onSubmit, isSubmitted, isSubmitting, submitError } =
@@ -50,7 +49,6 @@ export default function EnquiryForm() {
             {...register("fullName")}
             placeholder="Full Name *"
             className={INPUT_CLASS}
-            style={BORDER_STYLE}
             id="form-full-name"
           />
           {errors.fullName && (
@@ -64,7 +62,6 @@ export default function EnquiryForm() {
             {...register("organisation")}
             placeholder="Organisation *"
             className={INPUT_CLASS}
-            style={BORDER_STYLE}
             id="form-organisation"
           />
           {errors.organisation && (
@@ -81,7 +78,6 @@ export default function EnquiryForm() {
           {...register("role")}
           placeholder="Role / Title"
           className={INPUT_CLASS}
-          style={BORDER_STYLE}
           id="form-role"
         />
         <div>
@@ -90,7 +86,6 @@ export default function EnquiryForm() {
             type="email"
             placeholder="Email Address *"
             className={INPUT_CLASS}
-            style={BORDER_STYLE}
             id="form-email"
           />
           {errors.email && (
@@ -108,7 +103,6 @@ export default function EnquiryForm() {
           type="tel"
           placeholder="Phone Number"
           className={INPUT_CLASS}
-          style={BORDER_STYLE}
           id="form-phone"
         />
         <div>
@@ -116,7 +110,6 @@ export default function EnquiryForm() {
             {...register("country")}
             placeholder="Country *"
             className={INPUT_CLASS}
-            style={BORDER_STYLE}
             id="form-country"
           />
           {errors.country && (
@@ -140,15 +133,12 @@ export default function EnquiryForm() {
               onClick={() =>
                 setValue("enquiryType", t.value as typeof selectedType)
               }
-              className="type-caption rounded-[980px] px-4 py-2 transition-all duration-200"
-              style={{
-                background:
-                  selectedType === t.value
-                    ? "var(--accent)"
-                    : "rgba(255,255,255,0.08)",
-                color:
-                  selectedType === t.value ? "#fff" : "var(--text-secondary)",
-              }}
+              className={cn(
+                "type-caption rounded-[980px] px-4 py-2 transition-all duration-200",
+                selectedType === t.value
+                  ? "bg-accent text-white"
+                  : "bg-white/[0.08] text-[var(--text-secondary)]",
+              )}
               id={`form-type-${t.value}`}
             >
               {t.label}
@@ -164,7 +154,6 @@ export default function EnquiryForm() {
           placeholder="Message / Requirements *"
           rows={4}
           className={`${INPUT_CLASS} resize-none`}
-          style={BORDER_STYLE}
           id="form-message"
         />
         {errors.message && (

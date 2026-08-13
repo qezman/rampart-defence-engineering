@@ -12,8 +12,8 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="section" style={{ background: 'var(--bg-black)', paddingBottom: '60px' }}>
-        <div className="section-inner" style={{ paddingTop: 'var(--space-80)' }}>
+      <section className="section bg-surface-black pb-[60px]">
+        <div className="section-inner pt-[var(--space-80)]">
           <h1 className="type-headline text-[var(--text-white)] mb-4">Get in touch.</h1>
           <p className="type-body text-[var(--text-secondary)] max-w-[440px]">
             Our team responds within two working days.
@@ -23,7 +23,7 @@ export default function ContactPage() {
       </section>
 
       {/* Two-column layout */}
-      <section className="section" style={{ background: 'var(--bg-near-black)' }}>
+      <section className="section bg-surface-near-black">
         <div className="section-inner grid grid-cols-1 md:grid-cols-2 gap-20">
           {/* Contact details */}
           <div>

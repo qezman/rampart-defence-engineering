@@ -82,11 +82,7 @@ export default function ProtectionDiagram() {
   const active = ZONES.find((z) => z.id === activeZone);
 
   return (
-    <section
-      id="protection"
-      className="section"
-      style={{ background: "var(--bg-near-black)" }}
-    >
+    <section id="protection" className="section bg-surface-near-black">
       <div className="section-inner">
         <motion.h2
           className="type-title-1 text-[var(--text-white)] mb-4"
@@ -100,12 +96,11 @@ export default function ProtectionDiagram() {
           Hover each zone to see the ballistic specification for that area.
         </p>
 
-        <div className="relative w-full" style={{ aspectRatio: "16/7" }}>
+        <div className="relative w-full aspect-[16/7]">
           {/* SVG diagram */}
           <svg
             viewBox="0 0 800 350"
-            className="w-full h-full"
-            style={{ overflow: "visible" }}
+            className="w-full h-full overflow-visible"
           >
             {/* Vehicle body — stylised side silhouette */}
             <rect
@@ -179,7 +174,7 @@ export default function ProtectionDiagram() {
             {ZONES.map((zone) => (
               <g
                 key={zone.id}
-                style={{ cursor: "pointer" }}
+                className="cursor-pointer"
                 onClick={() =>
                   setActiveZone(zone.id === activeZone ? null : zone.id)
                 }
@@ -213,7 +208,7 @@ export default function ProtectionDiagram() {
                   fontSize="11"
                   fontWeight="500"
                   letterSpacing="0.06em"
-                  style={{ textTransform: "uppercase" }}
+                  className="uppercase"
                 >
                   {zone.label}
                 </text>
@@ -226,12 +221,7 @@ export default function ProtectionDiagram() {
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              className="absolute bottom-4 left-1/2 -translate-x-1/2 px-5 py-3 rounded-card text-center"
-              style={{
-                background: "var(--bg-surface-1)",
-                boxShadow: "var(--shadow-card)",
-                maxWidth: 280,
-              }}
+              className="absolute bottom-4 left-1/2 -translate-x-1/2 px-5 py-3 rounded-card text-center bg-surface-1 shadow-card max-w-[280px]"
             >
               <p className="type-title-3 text-[var(--text-white)] mb-1">
                 {active.label}

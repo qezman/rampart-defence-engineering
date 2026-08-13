@@ -48,8 +48,7 @@ export default function Lightbox({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{ background: 'rgba(0,0,0,0.96)' }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/[0.96]"
       onClick={onClose}
     >
       <button

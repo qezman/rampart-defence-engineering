@@ -8,7 +8,7 @@ interface OptionalUpgradesProps {
 
 export default function OptionalUpgrades({ upgrades }: OptionalUpgradesProps) {
   return (
-    <section className="section" style={{ background: 'var(--bg-black)' }}>
+    <section className="section bg-surface-black">
       <div className="section-inner">
         <motion.h2
           className="type-title-1 text-[var(--text-white)] mb-3"
@@ -30,11 +30,7 @@ export default function OptionalUpgrades({ upgrades }: OptionalUpgradesProps) {
           transition={{ duration: 0.7, delay: 0.1 }}
         >
           {upgrades.map((upgrade) => (
-            <div
-              key={upgrade}
-              className="rounded-card px-5 py-3"
-              style={{ background: 'var(--bg-surface-1)' }}
-            >
+            <div key={upgrade} className="rounded-card px-5 py-3 bg-surface-1">
               <p className="type-caption text-[var(--text-secondary)]">{upgrade}</p>
             </div>
           ))}
